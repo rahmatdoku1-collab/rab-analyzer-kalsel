@@ -36,6 +36,13 @@ if "jwt_token" not in st.session_state:
     st.session_state["jwt_token"] = None
     st.session_state["authentication_status"] = False
 
+# DEMO MODE
+DEMO_MODE = True
+if DEMO_MODE:
+    st.session_state["authentication_status"] = True
+    st.session_state["username"] = "demo_reviewer"
+    st.session_state["role"] = "SuperAdmin"
+    st.session_state["company_id"] = "DEMO"
 if not st.session_state["authentication_status"]:
     st.markdown('<h1 style="text-align: center;">🛡️ Enterprise SaaS Login</h1>', unsafe_allow_html=True)
     st.markdown('<p style="text-align: center;">AI Procurement Intelligence Kalsel</p>', unsafe_allow_html=True)
