@@ -47,7 +47,7 @@ def load_master() -> dict:
     import sqlite3
     conn = sqlite3.connect(MASTER_DB)
     rows = conn.execute(
-        "SELECT nama_item, harga_pasar, harga_median, sektor FROM master_harga WHERE harga_median > 0"
+        "SELECT nama_item, harga_min, harga_median, sektor FROM master_harga WHERE harga_median > 0"
     ).fetchall()
     conn.close()
     return {r[0].lower(): {"pasar": r[1] or r[2], "rab": r[2], "sektor": r[3]} for r in rows}
