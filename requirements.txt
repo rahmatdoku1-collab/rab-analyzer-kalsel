@@ -13,3 +13,4 @@ requests
 apscheduler
 SQLAlchemy
 PyPDF2
+xlsxwriter
