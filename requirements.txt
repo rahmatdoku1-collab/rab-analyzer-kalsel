@@ -1,0 +1,15 @@
+streamlit
+pandas
+openpyxl
+reportlab
+plotly
+rapidfuzz
+openai
+streamlit-authenticator==0.3.2
+python-dotenv
+feedparser
+beautifulsoup4
+requests
+apscheduler
+SQLAlchemy
+PyPDF2
